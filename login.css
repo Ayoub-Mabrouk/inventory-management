@@ -1,0 +1,76 @@
+* {
+  color: white;
+  font-family: "poppins";
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0D0D;
+}
+
+body #container #form-box {
+  margin: 10% auto;
+  width: 20%;
+  background-color: #1E1D25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  border-radius: 23px;
+}
+
+body #container #form-box p {
+  font-weight: bold;
+  color: #4E97B9;
+}
+
+body #container #form-box #email-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body #container #form-box #email-box input {
+  outline: none;
+  border: none;
+  background-color: #434343;
+  height: 45px;
+}
+
+body #container #form-box #passowrd-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body #container #form-box #passowrd-box input {
+  outline: none;
+  border: none;
+  background-color: #434343;
+  height: 45px;
+}
+/*# sourceMappingURL=login.css.map */

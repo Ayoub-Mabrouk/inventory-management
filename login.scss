@@ -1,0 +1,59 @@
+$logo-color:#4E97B9;
+$nav-bar-color:#17161C;
+$icons-color:#9B9B9B;
+$search-color:#212437;
+$text-color:white;
+$main-content-bg-color:#1E1D25;
+$data-bg-color:#27262C;
+
+
+* {
+    color: $text-color;
+    font-family:"poppins";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:#0D0D0D;
+    #container {
+        
+        #form-box {
+           margin: 10% auto;
+            width: 20%;
+            background-color: $main-content-bg-color;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+            border-radius: 23px;
+            p {
+                font-weight: bold;
+                color: $logo-color;
+            }
+           
+            #email-box {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                input {
+                    outline: none;
+                    border: none;
+                    background-color: #434343;
+                    height: 45px;
+                }
+            }
+            #passowrd-box {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                input {
+                    outline: none;
+                    border: none;
+                    background-color: #434343;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
