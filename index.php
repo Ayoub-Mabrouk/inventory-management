@@ -52,7 +52,7 @@
                 <button onclick="addproduct()" id="add-button">ADD PRODUCT</button>
                 <div id="user">
                     <div id="user-img">
-                        <img src="/users/Ayoub.jpeg">
+                        <img src="users/Ayoub.jpeg">
                     </div>
                     <p>Ayoub M</p>
                 </div>
@@ -77,12 +77,12 @@
                         <p class="quantity">39</p>
                         <p class="brand">Samsung</p>
                         <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
+                        <p class="owner" >Zineb</p>
                         <div class="edit-delete">
 
 
 
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -101,15 +101,15 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">2</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
                         <p class="brand">Samsung</p>
                         <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
+                        <p class="owner">Ayoub</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">3</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
@@ -134,7 +134,7 @@
                         <p class="price">30$</p>
                         <p class="owner">Zineb</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">4</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
@@ -159,7 +159,7 @@
                         <p class="price">30$</p>
                         <p class="owner">Zineb</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">5</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
@@ -184,7 +184,7 @@
                         <p class="price">30$</p>
                         <p class="owner">Zineb</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">6</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
@@ -209,7 +209,7 @@
                         <p class="price">30$</p>
                         <p class="owner">Zineb</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="data">
-                        <p class="id">1</p>
+                        <p class="id">7</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
                         <p class="quantity">39</p>
@@ -234,7 +234,7 @@
                         <p class="price">30$</p>
                         <p class="owner">Zineb</p>
                         <div class="edit-delete">
-                            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
+                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93"
                                 viewBox="0 0 30.302 26.93">
                                 <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
                                     d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z"
@@ -261,9 +261,6 @@
         <div class="content">
             <div class="inputs">
                 <div class="input-line">
-                    <p>ID</p><span>: <input id="id" type="text" readonly></span>
-                </div>
-                <div class="input-line">
                     <p>Name</p><span>: <input type="text"></span>
                 </div>
                 <div class="input-line">
@@ -283,11 +280,7 @@
                 </div>
             </div>
             <div class="upload-image">
-                <svg xmlns="http://www.w3.org/2000/svg" width="206" height="206" viewBox="0 0 206 206">
-                    <path id="Icon_material-insert-photo" data-name="Icon material-insert-photo"
-                        d="M210.5,187.611V27.389A22.956,22.956,0,0,0,187.611,4.5H27.389A22.956,22.956,0,0,0,4.5,27.389V187.611A22.956,22.956,0,0,0,27.389,210.5H187.611A22.956,22.956,0,0,0,210.5,187.611ZM67.444,124.667l28.611,34.448L136.111,107.5l51.5,68.667H27.389Z"
-                        transform="translate(-4.5 -4.5)" fill="#fff" />
-                </svg>
+                <img id="product_image" src="icons/insert photo.svg" alt="">
                 <label for="fileupload">UPLOAD PHOTO</label>
                 <input id="fileupload" type="file">
             </div>
@@ -304,31 +297,29 @@
         </div>
         <div class="content">
             <div class="inputs">
+            
                 <div class="input-line">
-                    <p>ID</p><span>: <input id="id" type="text" readonly></span>
+                    <p>Name</p><span>: <input class="name" type="text"></span>
                 </div>
                 <div class="input-line">
-                    <p>Name</p><span>: <input type="text"></span>
+                    <p>Price</p><span>: <input class="price" type="text"></span>
                 </div>
                 <div class="input-line">
-                    <p>Price</p><span>: <input type="text"></span>
+                    <p>Quantity</p><span>: <input class="quantity" type="text"></span>
                 </div>
                 <div class="input-line">
-                    <p>Quantity</p><span>: <input type="text"></span>
+                    <p>Barre code</p><span>: <input class="bc" type="text"></span>
                 </div>
                 <div class="input-line">
-                    <p>Barre code</p><span>: <input type="text"></span>
+                    <p>Brand</p><span>: <input class="brand" type="text"></span>
                 </div>
                 <div class="input-line">
-                    <p>Brand</p><span>: <input type="text"></span>
-                </div>
-                <div class="input-line">
-                    <p>Owner</p><span>: <input type="text"></span>
+                    <p>Owner</p><span>: <input class="owner" type="text" readonly></span>
                 </div>
             </div>
             <div class="upload-image">
 
-                <img id="product_image" src="/icons/insert photo.svg" alt="">
+                <img id="product_image" src="icons/insert photo.svg" alt="">
                 <label id="add_image_label" for="fileupload">UPLOAD PHOTO</label>
                 <input id="fileupload" type="file" name="file">
             </div>
@@ -348,12 +339,12 @@
         </div>
         <div class="two-buttons">
             <button id="close-delete" onclick="close_delete_pop()">CLOSE</button>
-            <button id="confirm-delete">DELETE</button>
+            <button onclick="" id="confirm-delete">DELETE</button>
         </div>
     </div>
     <div id="product-pop-up">
         <div class="product-image">
-            <img src="/product_images/samsung.jpg" alt="">
+            <img src="product_images/samsung.jpg" alt="">
         </div>
         <div class="product-info">
             <div class="product-titles">

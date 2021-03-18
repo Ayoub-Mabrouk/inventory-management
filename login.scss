@@ -1,59 +1,163 @@
-$logo-color:#4E97B9;
-$nav-bar-color:#17161C;
-$icons-color:#9B9B9B;
-$search-color:#212437;
-$text-color:white;
-$main-content-bg-color:#1E1D25;
-$data-bg-color:#27262C;
-
+$color: #4e97b9;
+$button-color: #34657c;
+$bg-color: #0d0d0d;
+$color_second: #1e1d25;
+$text-color: #f9f8f9;
 
 * {
-    color: $text-color;
-    font-family:"poppins";
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
 }
 body {
-    background-color:#0D0D0D;
-    #container {
-        
-        #form-box {
-           margin: 10% auto;
-            width: 20%;
-            background-color: $main-content-bg-color;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding: 50px;
-            border-radius: 23px;
-            p {
-                font-weight: bold;
-                color: $logo-color;
-            }
-           
-            #email-box {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                input {
-                    outline: none;
-                    border: none;
-                    background-color: #434343;
-                    height: 45px;
-                }
-            }
-            #passowrd-box {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                input {
-                    outline: none;
-                    border: none;
-                    background-color: #434343;
-                    height: 45px;
-                }
-            }
-        }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  .login {
+    align-items: center;
+    display: inline-block;
+    position: relative;
+
+    .container {
+      background-color: #1e1d25;
+      width: 535px;
+      height: 540px;
+      border-radius: 18px;
+      border: none;
+      margin-top: auto;
+      margin-left: auto;
+      display: flex;
     }
+    .cont {
+      margin: auto;
+      #STORE {
+        margin-bottom: 68px;
+        text-align: center;
+        color: $color;
+        font-size: 20px;
+      }
+    }
+
+    .title-nm {
+      color: white;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .E-input {
+      margin-top: 30px;
+      input {
+        background-color: #434343;
+        outline: none;
+        border: none;
+        width: 408px;
+        padding: 20px 10px;
+        color: $text-color;
+        &::placeholder {
+          color: $text-color;
+        }
+      }
+      .message {
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        color: rgba(206, 75, 75, 0.842);
+        font-size: 14px;
+        margin-top: 2px;
+      }
+    }
+
+    #submit-button-box {
+      text-align: center;
+      button {
+        cursor: pointer;
+        outline: none;
+        color: $text-color;
+        background-color: $button-color;
+
+        width: 169px;
+        height: 40px;
+        border: none;
+        margin-top: 37px;
+        font-weight: bold;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 415px) {
+  
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+    .login {
+      align-items: center;
+      display: inline-block;
+      position: relative;
+  
+      .container {
+        background-color: #1e1d25;
+      width: 400px;
+      height: 540px;
+      border-radius: 18px;
+      border: none;
+      margin-top: auto;
+      margin-left: auto;
+      display: flex;
+      }
+      .cont {
+        margin: auto;
+        #STORE {
+          margin-bottom: 68px;
+          text-align: center;
+          color: $color;
+          font-size: 20px;
+        }
+      }
+  
+      .title-nm {
+        color: white;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+  
+      .E-input {
+        margin-top: 30px;
+        input {
+          background-color: #434343;
+          outline: none;
+          border: none;
+          width: 99%;
+          padding: 20px 30px;
+          color: $text-color;
+          &::placeholder {
+            color: $text-color;
+          }
+        }
+      }
+  
+      #submit-button-box {
+        text-align: center;
+        button {
+          color: $text-color;
+          background-color: $button-color;
+  
+          width: 169px;
+          height: 40px;
+          border: none;
+          margin-top: 37px;
+          font-weight: bold;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
 }

@@ -7,6 +7,7 @@ $main-content-bg-color:#1E1D25;
 $data-bg-color:#27262C;
 
 @mixin button-style {
+    transition:all 1s;
     font-family: "Poppins";
     color: $text-color;
     background-color: Transparent;
@@ -17,6 +18,12 @@ $data-bg-color:#27262C;
     padding: 0 15px;
     width: 150px;
     height: 40px;
+    outline: none;
+    &:hover {
+        
+        border: none;
+        background-color: #4E97B9;
+    }
 }
 
 * {
@@ -144,7 +151,7 @@ body {
             .data-container  {
                 height: 470px;
                 overflow: scroll;
-                // scrollbar-width: none;
+                
                   
                 .data {
                     background-color: $data-bg-color;
@@ -228,11 +235,12 @@ body {
                     border: none;
                     border-radius: 50px;
                     padding: 20px;
+                    & .owner {
+                        background-color: #5D5D61;
+                        cursor: not-allowed;
+                    }
                 }
-                #id{
-                    background-color: #5D5D61;
-                    cursor: not-allowed;
-                }
+               
             }
         }
         .upload-image {
@@ -562,6 +570,11 @@ body {
                 @include button-style;
                 &:nth-child(1) {
                    margin-right: 30px;
+                }
+                &:hover {
+        
+                    border:solid 1px $text-color ;
+                    background-color: transparent;
                 }
             }
            

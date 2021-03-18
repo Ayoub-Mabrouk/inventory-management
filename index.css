@@ -98,6 +98,8 @@ body {
 
 #container #right-container #search-bar button {
   margin-left: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: "Poppins";
   color: white;
   background-color: Transparent;
@@ -108,6 +110,12 @@ body {
   padding: 0 15px;
   width: 150px;
   height: 40px;
+  outline: none;
+}
+
+#container #right-container #search-bar button:hover {
+  border: none;
+  background-color: #4E97B9;
 }
 
 #container #right-container #search-bar #user {
@@ -291,7 +299,7 @@ body {
   padding: 20px;
 }
 
-.popup.container .content .inputs .input-line #id {
+.popup.container .content .inputs .input-line input .owner {
   background-color: #5D5D61;
   cursor: not-allowed;
 }
@@ -314,6 +322,8 @@ body {
 .popup.container .content .upload-image label {
   text-align: center;
   margin-top: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: "Poppins";
   color: white;
   background-color: Transparent;
@@ -324,9 +334,15 @@ body {
   padding: 0 15px;
   width: 150px;
   height: 40px;
+  outline: none;
   height: auto;
   padding: 7px;
   width: 100%;
+}
+
+.popup.container .content .upload-image label:hover {
+  border: none;
+  background-color: #4E97B9;
 }
 
 .popup.container .content .upload-image input {
@@ -344,6 +360,8 @@ body {
 }
 
 .popup.container .two-buttons button {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: "Poppins";
   color: white;
   background-color: Transparent;
@@ -354,6 +372,12 @@ body {
   padding: 0 15px;
   width: 150px;
   height: 40px;
+  outline: none;
+}
+
+.popup.container .two-buttons button:hover {
+  border: none;
+  background-color: #4E97B9;
 }
 
 .popup.container .two-buttons button:nth-child(1) {
@@ -404,6 +428,8 @@ body {
 }
 
 .delete-pop .two-buttons button {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: "Poppins";
   color: white;
   background-color: Transparent;
@@ -414,7 +440,13 @@ body {
   padding: 0 15px;
   width: 150px;
   height: 40px;
+  outline: none;
   margin: 30px 30px 0px 0px;
+}
+
+.delete-pop .two-buttons button:hover {
+  border: none;
+  background-color: #4E97B9;
 }
 
 #product-pop-up {
@@ -673,6 +705,8 @@ body {
   .popup.container .content .upload-image label {
     text-align: center;
     margin-top: 25px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
     font-family: "Poppins";
     color: white;
     background-color: Transparent;
@@ -683,9 +717,14 @@ body {
     padding: 0 15px;
     width: 150px;
     height: 40px;
+    outline: none;
     height: auto;
     padding: 7px;
     width: 50%;
+  }
+  .popup.container .content .upload-image label:hover {
+    border: none;
+    background-color: #4E97B9;
   }
   .popup.container .content .upload-image input {
     display: none;
@@ -700,6 +739,8 @@ body {
             justify-content: center;
   }
   .popup.container .two-buttons button {
+    -webkit-transition: all 1s;
+    transition: all 1s;
     font-family: "Poppins";
     color: white;
     background-color: Transparent;
@@ -710,9 +751,18 @@ body {
     padding: 0 15px;
     width: 150px;
     height: 40px;
+    outline: none;
+  }
+  .popup.container .two-buttons button:hover {
+    border: none;
+    background-color: #4E97B9;
   }
   .popup.container .two-buttons button:nth-child(1) {
     margin-right: 30px;
+  }
+  .popup.container .two-buttons button:hover {
+    border: solid 1px white;
+    background-color: transparent;
   }
   .delete-pop {
     opacity: 0;
@@ -754,6 +804,8 @@ body {
   }
   .delete-pop .two-buttons button {
     width: 100%;
+    -webkit-transition: all 1s;
+    transition: all 1s;
     font-family: "Poppins";
     color: white;
     background-color: Transparent;
@@ -764,7 +816,12 @@ body {
     padding: 0 15px;
     width: 150px;
     height: 40px;
+    outline: none;
     margin: 30px 10px 0px 0px;
+  }
+  .delete-pop .two-buttons button:hover {
+    border: none;
+    background-color: #4E97B9;
   }
   #product-pop-up {
     opacity: 0;
