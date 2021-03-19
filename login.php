@@ -15,7 +15,7 @@
 </head>
 
 <body>
- <form id="login-form">
+ <form id="login-form" action="" method="POST">
     <div class="login">
       <div class="container">
         <div class="cont">
@@ -30,7 +30,7 @@
             <input type="password" class="password input" name="password" placeholder="Your Password" >
             <p class="message" id="password-is-invalid">invalid password</p>
           </div>
-          <div id="submit-button-box"><button type="submit" id="submit-button">Login</button> </div>
+          <div id="submit-button-box"><button name="submit" type="submit" id="submit-button">Login</button> </div>
 
         </div>
       </div>

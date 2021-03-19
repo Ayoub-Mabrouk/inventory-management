@@ -299,7 +299,12 @@ body {
   padding: 20px;
 }
 
-.popup.container .content .inputs .input-line input .owner {
+.popup.container .content .inputs .input-line .id.edit, .popup.container .content .inputs .input-line .id.add {
+  background-color: #5D5D61;
+  cursor: not-allowed;
+}
+
+.popup.container .content .inputs .input-line .owner {
   background-color: #5D5D61;
   cursor: not-allowed;
 }

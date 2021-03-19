@@ -24,7 +24,7 @@ for (i = 0; i < delete_buttons.length; i++) {
     delete_buttons[i].addEventListener("click", delete_confirmation);
 }
 
-close_edit_button.addEventListener('click', close_edit_pop);
+
 close_info_button.addEventListener('click', close_info);
 image_input.addEventListener('change', image_name);
 add_prod_mobile.addEventListener('click', addproduct);
@@ -41,7 +41,7 @@ function edit_product() {
     edit_product_popup.style.transform = "scale(1)";
 }
 function fill_edit_pop(product){
-    
+    document.querySelector("#editproduct_popup .id.edit").value=product.children[0].innerHTML;
     document.querySelector("#editproduct_popup .bc").value=product.children[1].innerHTML;
     document.querySelector("#editproduct_popup .price").value=product.children[5].innerHTML.slice(0, -1);
     document.querySelector("#editproduct_popup .quantity").value=product.children[3].innerHTML;
@@ -61,23 +61,27 @@ function addproduct() {
 }
 
 
-function close_add_pop() {
+function close_add_pop(event) {
     container.style.webkitFilter = "blur(0px)";
     add_product_popup.style.opacity = "0";
     add_product_popup.style.visibility = "hidden";
     add_product_popup.style.transform = "scale(0)";
+    event.preventDefault();
 
 }
-function close_edit_pop() {
-
+function close_edit_pop(event) {
+   
     container.style.webkitFilter = "blur(0px)";
     edit_product_popup.style.opacity = "0";
     edit_product_popup.style.visibility = "hidden";
     edit_product_popup.style.transform = "scale(0)";
+    event.preventDefault();
 
 }
 function delete_confirmation() {
-    product = this;
+    // product = this;
+    var id = this.parentElement.parentElement.children[0].innerHTML;
+    document.getElementById('delete_hidden_input').value =id;
     container.style.webkitFilter = "blur(6px)";
     delete_pop.style.opacity = "1";
     delete_pop.style.visibility = "visible";
@@ -86,15 +90,20 @@ function delete_confirmation() {
         delete_ok(product);
     })
 }
-function close_delete_pop() {
+
+// document.getElementById("close-delete").addEventListener('click',close_delete_pop);
+
+function close_delete_pop(event) {
+    event.preventDefault();
     container.style.webkitFilter = "blur(0px)";
     delete_pop.style.opacity = "0";
     delete_pop.style.visibility = "hidden";
     delete_pop.style.transform = "scale(0)";
+   
 }
 
 function delete_ok(product) {
-    product.parentElement.parentElement.remove();
+    // product.parentElement.parentElement.remove();
     container.style.webkitFilter = "blur(0px)";
     delete_pop.style.opacity = "0";
     delete_pop.style.visibility = "hidden";

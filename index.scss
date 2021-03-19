@@ -235,10 +235,14 @@ body {
                     border: none;
                     border-radius: 50px;
                     padding: 20px;
-                    & .owner {
-                        background-color: #5D5D61;
-                        cursor: not-allowed;
-                    }
+                }
+                .id.edit , .id.add{
+                    background-color: #5D5D61;
+                    cursor: not-allowed;
+                }
+                .owner {
+                    background-color: #5D5D61;
+                    cursor: not-allowed;
                 }
                
             }
