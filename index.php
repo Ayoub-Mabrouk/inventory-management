@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!$_SESSION['logged']) {
+    header('location: login.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Electro Store | Dashboard</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
@@ -48,9 +56,17 @@
                 <button onclick="addproduct()" id="add-button">ADD PRODUCT</button>
                 <div id="user">
                     <div id="user-img">
-                        <img src="users/Ayoub.jpeg">
+                        <img src="<?php echo $_SESSION['profile_img']; ?>">
                     </div>
-                    <p>Ayoub M</p>
+                    <p> <?php echo $_SESSION['name']; ?> </p>
+                    <form id="logout-form" action="php/logout.php" method="POST">
+
+                        <svg id="log-out" xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5">
+                            <path id="Icon_open-account-logout" data-name="Icon open-account-logout" d="M13.5,0V4.5h18V27h-18v4.5H36V0ZM9,9,0,15.75,9,22.5V18H27V13.5H9Z" fill="#9b9b9b" />
+                        </svg>
+                    </form>
+
+
                 </div>
 
             </div>
@@ -67,126 +83,6 @@
                 <div class="data-container">
                     <?php include 'php/read.php'; ?>
                     <!-- <div class="data">
-
-                        <p class="id">1</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
-                        <div class="edit-delete">
-
-
-
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-
-
-                        </div>
-                    </div>
-                    <div class="data">
-                        <p class="id">2</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Ayoub</p>
-                        <div class="edit-delete">
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <p class="id">3</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
-                        <div class="edit-delete">
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <p class="id">4</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
-                        <div class="edit-delete">
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <p class="id">5</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
-                        <div class="edit-delete">
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <p class="id">6</p>
-                        <p class="barcode">7869</p>
-                        <p class="name">Samsung s20</p>
-                        <p class="quantity">39</p>
-                        <p class="brand">Samsung</p>
-                        <p class="price">30$</p>
-                        <p class="owner">Zineb</p>
-                        <div class="edit-delete">
-                            <svg class="edit_button" xmlns="http://www.w3.org/2000/svg" width="30.302" height="26.93" viewBox="0 0 30.302 26.93">
-                                <path id="Icon_awesome-edit" data-name="Icon awesome-edit" d="M21.18,4.379l4.745,4.745a.514.514,0,0,1,0,.726l-11.49,11.49-4.882.542A1.023,1.023,0,0,1,8.422,20.75l.542-4.882,11.49-11.49A.514.514,0,0,1,21.18,4.379Zm8.522-1.2L27.135.607a2.058,2.058,0,0,0-2.9,0L22.369,2.469a.514.514,0,0,0,0,.726L27.114,7.94a.514.514,0,0,0,.726,0L29.7,6.078A2.058,2.058,0,0,0,29.7,3.174ZM20.2,18.215V23.57H3.367V6.736H15.456a.647.647,0,0,0,.447-.184l2.1-2.1a.631.631,0,0,0-.447-1.078H2.525A2.526,2.526,0,0,0,0,5.894V24.412a2.526,2.526,0,0,0,2.525,2.525H21.043a2.526,2.526,0,0,0,2.525-2.525v-8.3a.632.632,0,0,0-1.078-.447l-2.1,2.1A.647.647,0,0,0,20.2,18.215Z" transform="translate(0 -0.007)" fill="#9b9b9b" />
-                            </svg>
-
-
-                            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20.945" height="26.93" viewBox="0 0 20.945 26.93">
-                                <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M9,28.438a3,3,0,0,0,2.992,2.992H23.957a3,3,0,0,0,2.992-2.992V10.484H9Zm3.68-10.652,2.11-2.11,3.187,3.172,3.172-3.172,2.11,2.11-3.172,3.172,3.172,3.172-2.11,2.11-3.172-3.172L14.8,26.238l-2.11-2.11,3.172-3.172ZM23.209,6l-1.5-1.5H14.232L12.736,6H7.5V8.988H28.445V6Z" transform="translate(-7.5 -4.5)" fill="#9b9b9b" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="data">
                         <p class="id">7</p>
                         <p class="barcode">7869</p>
                         <p class="name">Samsung s20</p>
@@ -211,7 +107,7 @@
     </div>
     <div id="addproduct_popup" class="popup container add">
 
-        <form action="php/add_product.php" method="POST">
+        <form id="add_form" action="php/add_product.php" method="POST" enctype="multipart/form-data">
             <div class="title">
                 <p>Add new product</p>
             </div>
@@ -236,13 +132,13 @@
                         <p>Brand</p><span>: <input name="brand" type="text"></span>
                     </div>
                     <div class="input-line">
-                        <p>Owner</p><span>: <input name="owner" class="owner" type="text"></span>
+                        <p>Owner</p><span>: <input name="owner" class="owner" value="<?php echo $_SESSION['name']; ?>" type="text"></span>
                     </div>
                 </div>
                 <div class="upload-image">
-                    <img id="product_image" src="icons/insert photo.svg" alt="">
-                    <label for="fileupload">UPLOAD PHOTO</label>
-                    <input id="fileupload" type="file">
+                    <img id="product_image_add" src="icons/insert photo.svg" alt="">
+                    <label for="fileupload_add">UPLOAD PHOTO</label>
+                    <input id="fileupload_add" name="image" type="file">
                 </div>
 
             </div>
@@ -253,7 +149,7 @@
         </form>
     </div>
     <div id="editproduct_popup" class="popup container edit">
-        <form action="php/edit.php" method="POST">
+        <form id="edit_form" action="php/edit.php" method="POST" enctype="multipart/form-data">
             <div class="title">
                 <p>Edit product</p>
             </div>
@@ -278,14 +174,14 @@
                         <p>Brand</p><span>: <input name="brand" class="brand" type="text"></span>
                     </div>
                     <div class="input-line">
-                        <p>Owner</p><span>: <input name="owner" class="owner" type="text" readonly></span>
+                        <p>Owner</p><span>: <input name="owner" class="owner" value="<?php echo $_SESSION['name']; ?>" type="text" readonly></span>
                     </div>
                 </div>
                 <div class="upload-image">
 
-                    <img id="product_image" src="icons/insert photo.svg" alt="">
-                    <label id="add_image_label" for="fileupload">UPLOAD PHOTO</label>
-                    <input id="fileupload" type="file" name="file">
+                    <img id="product_image_edit" src="icons/insert photo.svg" alt="">
+                    <label for="fileupload_edit">UPLOAD PHOTO</label>
+                    <input id="fileupload_edit" type="file" name="image">
                 </div>
 
             </div>
@@ -312,7 +208,7 @@
     </div>
     <div id="product-pop-up">
         <div class="product-image">
-            <img src="product_images/samsung.jpg" alt="">
+            <img id="image_popup" src="product_images/samsung.jpg" alt="">
         </div>
         <div class="product-info">
             <div class="product-titles">
@@ -361,7 +257,7 @@
             </svg>
         </div>
     </div>
-    <script src="index.js">
+    <script src="js/index.js">
 
     </script>
 </body>

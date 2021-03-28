@@ -139,6 +139,10 @@ body {
   padding-right: 25px;
 }
 
+#container #right-container #search-bar #user svg {
+  cursor: pointer;
+}
+
 #container #right-container #search-bar #search-box {
   padding: 12px 20px;
   border-radius: 50px;
@@ -206,6 +210,10 @@ body {
 
 #container #right-container #main-container .data-container .data p {
   padding: 20px 40px 20px 40px;
+}
+
+#container #right-container #main-container .data-container .data .imgsrc {
+  display: none;
 }
 
 #container #right-container #main-container .data-container .data p:nth-child(7) {
@@ -517,6 +525,7 @@ body {
 #product-pop-up .close-info-button {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  cursor: pointer;
 }
 
 #navigation {

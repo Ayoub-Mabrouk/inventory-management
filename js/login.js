@@ -11,8 +11,7 @@ var email_regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 function verify(event) {
     //event of the form
-    verify_username();
-    verify_password();
+   
     if(verify_username()==true && verify_password()==true){
         document.getElementById('login-form').submit();
     }

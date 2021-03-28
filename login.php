@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/login.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +17,7 @@
 </head>
 
 <body>
- <form id="login-form" action="" method="POST">
+ <form id="login-form" action="php/login_process.php" method="POST">
     <div class="login">
       <div class="container">
         <div class="cont">
@@ -31,13 +33,12 @@
             <p class="message" id="password-is-invalid">invalid password</p>
           </div>
           <div id="submit-button-box"><button name="submit" type="submit" id="submit-button">Login</button> </div>
-
         </div>
       </div>
     </div>
   </form>
 
-<script src="login.js" ></script>
+<script src="js/login.js" ></script>
 </body>
 
 </html>

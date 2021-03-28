@@ -111,6 +111,9 @@ body {
                     padding-left: 10px;
                     padding-right: 25px;
                 }
+                svg {
+                    cursor: pointer;
+                }
             }
             #search-box {
                 
@@ -154,6 +157,7 @@ body {
                 
                   
                 .data {
+                    
                     background-color: $data-bg-color;
                     margin-left: 20px;
                     margin-bottom:15px ;
@@ -161,8 +165,12 @@ body {
                     display: flex;
                     align-items: center;
                     color: white;
+  
                 p {
                     padding: 20px 40px 20px 40px ;
+                }
+                .imgsrc {
+                    display: none;
                 }
                 p:nth-child(7){
                     margin-left: 10px;
@@ -378,6 +386,7 @@ body {
     }
     .close-info-button {
         align-self: flex-start;
+        cursor: pointer;
     }
 }
 #navigation {
